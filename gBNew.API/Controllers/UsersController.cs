@@ -71,7 +71,7 @@ public class UsersController : ControllerBase
     return Ok(userDto);
   }
 
-  [HttpPost("{id:int}")]
+  [HttpDelete("{id:int}")]
   public async Task<ActionResult> Delete(int id)
   {
     var userDto = await _userService.GetUserById(id);
