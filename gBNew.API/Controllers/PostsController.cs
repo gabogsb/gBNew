@@ -30,7 +30,7 @@ public class PostsController : ControllerBase
     return Ok(postDto);
   }
 
-  [HttpGet("{int:id}", Name = "GetPost")]
+  [HttpGet("{id:int}", Name = "GetPost")]
   public async Task<ActionResult<PostDTO>> GetById(int id)
   {
     var postDto = await _postService.GetPostById(id);
@@ -55,7 +55,7 @@ public class PostsController : ControllerBase
 
   }
 
-  [HttpPut("{id:int")]
+  [HttpPut("{id:int}")]
   public async Task<ActionResult> Put(int id, [FromBody] PostDTO postDto)
   {
     if (id != postDto.PostId)

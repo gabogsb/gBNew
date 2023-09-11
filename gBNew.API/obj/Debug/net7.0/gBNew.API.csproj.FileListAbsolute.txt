@@ -41,3 +41,5 @@ E:\gabo\gBNew\gBNew.API\obj\Debug\net7.0\refint\gBNew.API.dll
 E:\gabo\gBNew\gBNew.API\obj\Debug\net7.0\gBNew.API.pdb
 E:\gabo\gBNew\gBNew.API\obj\Debug\net7.0\gBNew.API.genruntimeconfig.cache
 E:\gabo\gBNew\gBNew.API\obj\Debug\net7.0\ref\gBNew.API.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\AutoMapper.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

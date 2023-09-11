@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj": {}
+    "E:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj": {}
   },
   "projects": {
-    "e:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj": {
+    "E:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj",
+        "projectUniqueName": "E:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj",
         "projectName": "gBNew.API",
-        "projectPath": "e:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj",
+        "projectPath": "E:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj",
         "packagesPath": "C:\\Users\\gabriel.barcellos\\.nuget\\packages\\",
-        "outputPath": "e:\\gabo\\gBNew\\gBNew.API\\obj\\",
+        "outputPath": "E:\\gabo\\gBNew\\gBNew.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gabriel.barcellos\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -20,6 +20,7 @@
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files\\dotnet\\sdk\\7.0.305\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

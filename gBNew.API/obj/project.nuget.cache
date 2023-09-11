@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iAvFkZfF2axLmCQ5p/Q9Y+pIi7BGi4ceoNaLQXIABCorJOHyGpig6aZD7sjhL7XdDhJiFyvSf7MeUylW0JvJ4g==",
+  "dgSpecHash": "5Ve0anD/BBxGv2hSzl1O295/BZlGmlEDe/VnrjTyyoo/IB+epccrTBmmQtFsLuduF7Kv4kNSysKwLv3xMQtW+w==",
   "success": true,
-  "projectFilePath": "e:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj",
+  "projectFilePath": "E:\\gabo\\gBNew\\gBNew.API\\gBNew.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabriel.barcellos\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\gabriel.barcellos\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

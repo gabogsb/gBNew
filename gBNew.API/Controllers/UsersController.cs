@@ -55,7 +55,7 @@ public class UsersController : ControllerBase
     return new CreatedAtRouteResult("GetUser", new { id = userDto.UserId }, userDto);
   }
 
-  [HttpPut("{id:int")]
+  [HttpPut("{id:int}")]
   public async Task<ActionResult> Put(int id, [FromBody] UserDTO userDto)
   {
     if (id != userDto.UserId)
