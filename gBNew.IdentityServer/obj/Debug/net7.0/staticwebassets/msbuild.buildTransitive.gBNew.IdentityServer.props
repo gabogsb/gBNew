@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\gBNew.IdentityServer.props" />
+</Project>
