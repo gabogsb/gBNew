@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using gBNew.API.DTOs;
+using gBNew.API.Roles;
 using gBNew.API.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace gBNew.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Authorize]
 public class PostsController : ControllerBase
 {
   private readonly IPostService _postService;
@@ -72,6 +76,7 @@ public class PostsController : ControllerBase
   }
 
   [HttpDelete("{id:int}")]
+  [Authorize(Roles = Role.Admin)]
   public async Task<ActionResult> Delete(int id)
   {
     var postDto = await _postService.GetPostById(id);

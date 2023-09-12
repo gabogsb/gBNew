@@ -5,13 +5,16 @@ using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using gBNew.API.DTOs;
+using gBNew.API.Roles;
 using gBNew.API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace gBNew.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Authorize]
 public class UsersController : ControllerBase
 {
   private readonly IUserService _userService;
@@ -72,6 +75,7 @@ public class UsersController : ControllerBase
   }
 
   [HttpDelete("{id:int}")]
+  [Authorize(Roles = Role.Admin)]
   public async Task<ActionResult> Delete(int id)
   {
     var userDto = await _userService.GetUserById(id);
