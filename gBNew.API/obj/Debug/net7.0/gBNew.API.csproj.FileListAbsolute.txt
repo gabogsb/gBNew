@@ -43,3 +43,10 @@ E:\gabo\gBNew\gBNew.API\obj\Debug\net7.0\gBNew.API.genruntimeconfig.cache
 E:\gabo\gBNew\gBNew.API\obj\Debug\net7.0\ref\gBNew.API.dll
 E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\AutoMapper.dll
 E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\gabo\gBNew\gBNew.API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll

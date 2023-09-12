@@ -14,7 +14,7 @@ namespace gBNew.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize]
+// [Authorize]
 public class UsersController : ControllerBase
 {
   private readonly IUserService _userService;
@@ -75,7 +75,7 @@ public class UsersController : ControllerBase
   }
 
   [HttpDelete("{id:int}")]
-  [Authorize(Roles = Role.Admin)]
+  // [Authorize(Roles = Role.Admin)]
   public async Task<ActionResult> Delete(int id)
   {
     var userDto = await _userService.GetUserById(id);

@@ -13,7 +13,7 @@ namespace gBNew.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize]
+// [Authorize]
 public class PostsController : ControllerBase
 {
   private readonly IPostService _postService;
@@ -76,7 +76,7 @@ public class PostsController : ControllerBase
   }
 
   [HttpDelete("{id:int}")]
-  [Authorize(Roles = Role.Admin)]
+  // [Authorize(Roles = Role.Admin)]
   public async Task<ActionResult> Delete(int id)
   {
     var postDto = await _postService.GetPostById(id);
