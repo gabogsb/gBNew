@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using gBNew.API.DTOs;
 using gBNew.API.Roles;
 using gBNew.API.Services;
@@ -12,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace gBNew.API.Controllers;
 
+[Authorize(AuthenticationSchemes = "Bearer")]
 [ApiController]
 [Route("[controller]")]
-// [Authorize]
 public class UsersController : ControllerBase
 {
   private readonly IUserService _userService;

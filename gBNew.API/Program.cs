@@ -1,6 +1,9 @@
+using System.Text;
 using gBNew.API.Context;
 using gBNew.API.Repositories;
 using gBNew.API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -48,6 +51,23 @@ builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                                .AddJwtBearer(options =>
+                                options.TokenValidationParameters = new TokenValidationParameters
+                                {
+                                  ValidateIssuer = true,
+                                  ValidateAudience = true,
+                                  ValidateLifetime = true,
+                                  ValidAudience = builder.Configuration["TokenConfiguration: Audience"],
+                                  ValidIssuer = builder.Configuration["TokenConfiguration:Issuer"],
+                                  ValidateIssuerSigningKey = true,
+                                  IssuerSigningKey = new SymmetricSecurityKey(
+                                      Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                                });
+
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IUserRepository, UserRepository>();
