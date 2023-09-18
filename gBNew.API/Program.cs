@@ -16,36 +16,37 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-// builder.Services.AddSwaggerGen(c =>
-// {
-//   c.SwaggerDoc("v1", new OpenApiInfo { Title = "VShop.ProductApi", Version = "v1" });
-//   c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-//   {
-//     Description = @"'Bearer' [space] seu token",
-//     Name = "Authorization",
-//     In = ParameterLocation.Header,
-//     Type = SecuritySchemeType.ApiKey,
-//     Scheme = "Bearer"
-//   });
+builder.Services.AddSwaggerGen(c =>
+{
+  c.SwaggerDoc("v1", new OpenApiInfo { Title = "gBNew.API", Version = "v1" });
+  c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+  {
+    Name = "Authorization",
+    In = ParameterLocation.Header,
+    Type = SecuritySchemeType.ApiKey,
+    Scheme = "Bearer",
+    BearerFormat = "JWT",
+    Description = "Header de autoriza��o JWT usando o esquema Bearer.\r\n\r\nInforme 'Bearer'[espa�o] e o seu token.\r\n\r\nExamplo: \'Bearer 12345abcdef\'",
+  });
 
-//   c.AddSecurityRequirement(new OpenApiSecurityRequirement
-//     {
-//          {
-//             new OpenApiSecurityScheme
-//             {
-//                Reference = new OpenApiReference
-//                {
-//                   Type = ReferenceType.SecurityScheme,
-//                   Id = "Bearer"
-//                },
-//                Scheme = "oauth2",
-//                Name = "Bearer",
-//                In= ParameterLocation.Header
-//             },
-//             new List<string> ()
-//          }
-//     });
-// });
+  c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+         {
+            new OpenApiSecurityScheme
+            {
+               Reference = new OpenApiReference
+               {
+                  Type = ReferenceType.SecurityScheme,
+                  Id = "Bearer"
+               },
+               Scheme = "oauth2",
+               Name = "Bearer",
+               In= ParameterLocation.Header
+            },
+            new List<string> ()
+         }
+    });
+});
 
 
 
@@ -61,7 +62,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                                   ValidateIssuer = true,
                                   ValidateAudience = true,
                                   ValidateLifetime = true,
-                                  ValidAudience = builder.Configuration["TokenConfiguration: Audience"],
+                                  ValidAudience = builder.Configuration["TokenConfiguration:Audience"],
                                   ValidIssuer = builder.Configuration["TokenConfiguration:Issuer"],
                                   ValidateIssuerSigningKey = true,
                                   IssuerSigningKey = new SymmetricSecurityKey(

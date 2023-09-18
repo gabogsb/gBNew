@@ -1,14 +1,15 @@
 using gBNew.API.DTOs;
 using gBNew.API.Roles;
 using gBNew.API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace gBNew.API.Controllers;
 
-[Authorize(AuthenticationSchemes = "Bearer")]
 [ApiController]
 [Route("[controller]")]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 public class UsersController : ControllerBase
 {
   private readonly IUserService _userService;
